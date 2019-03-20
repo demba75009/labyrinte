@@ -1,5 +1,7 @@
 import pygame
 from pygame.locals import *
+import os
+import pygame.mixer
 
 pygame.init()
 
@@ -20,6 +22,9 @@ pygame.display.flip()
 pygame.key.set_repeat(400, 30)
 
 #BOUCLE INFINIE
+ 
+pygame.mixer.music.load("02.Ninho - Fendi.mp3")   # chargement de la musique
+pygame.mixer.music.play(-1)  
 continuer = 1
 while continuer:
 	for event in pygame.event.get():	#Attente des événements
